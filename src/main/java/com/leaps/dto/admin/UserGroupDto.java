@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserGroupDto {
     private Long id;
-    private Long companyId;
-    private String companyName;
+//    private Long companyId;
+//    private String companyName;
     private String userGroupName;
 }

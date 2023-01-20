@@ -26,10 +26,10 @@ public class UserGroup {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long companyId;
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "companyId", updatable = false, insertable = false)
-    private Company company;
+//    private Long companyId;
+//    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+//    @JoinColumn(name = "companyId", updatable = false, insertable = false)
+//    private Company company;
     private String userGroupName;
 
     @CreationTimestamp

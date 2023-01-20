@@ -22,4 +22,14 @@ public interface UsersRepository extends JpaRepository<Users, Long> {
 
     @Query(value = "select * from users where valid_flag=1", nativeQuery = true)
     Page<Users> getallActivePagination(Pageable pageable);
+    
+    Optional<Users> findByEmail(String email);
+    
+    Optional<Users> findByUsernameOrEmail(String username,String email);
+    
+    Optional<Users> findByUsername(String username);
+    
+    Boolean existsByUsername(String username);
+    
+    Boolean existsByEmail(String email);
 }

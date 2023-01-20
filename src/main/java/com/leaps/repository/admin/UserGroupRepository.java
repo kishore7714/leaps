@@ -23,4 +23,6 @@ public interface UserGroupRepository extends JpaRepository<UserGroup, Long> {
 
     @Query(value = "select * from user_group where valid_flag=1", nativeQuery = true)
     Page<UserGroup> getallActivePagination(Pageable pageable);
+    
+    Optional<UserGroup> findByUserGroupName(String userGroupName);
 }

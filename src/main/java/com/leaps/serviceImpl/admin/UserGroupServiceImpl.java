@@ -44,15 +44,7 @@ public class UserGroupServiceImpl implements UserGroupService {
     	ModelMapper mapper = new ModelMapper();
     	mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
     	
-    	mapper.addMappings(new PropertyMap<UserGroup, UserGroupDto>() {
 
-			@Override
-			protected void configure() {
-				map().setCompanyName(source.getCompany().getCompanyName());
-				
-			}
-    		
-		});
     	UserGroupDto dto = mapper.map(entity, UserGroupDto.class);
         return dto;
     };
@@ -135,7 +127,7 @@ public class UserGroupServiceImpl implements UserGroupService {
                 .orElseThrow(() -> new ResourceNotFoundException("UserGroup", "id", id));
 
         // Using Optional for Null check
-        Optional.of(entity.getCompanyId()).ifPresent((DeathClaimCoverDetails) -> usergroup.setCompanyId(entity.getCompanyId()));
+//        Optional.of(entity.getCompanyId()).ifPresent((DeathClaimCoverDetails) -> usergroup.setCompanyId(entity.getCompanyId()));
 
         Optional.ofNullable(entity.getUserGroupName())
                 .ifPresent((UserGroup) -> usergroup.setUserGroupName(entity.getUserGroupName()));

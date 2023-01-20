@@ -45,7 +45,7 @@ public class UsersServiceImpl implements UsersService {
 			@Override
 			protected void configure() {
 				map().setCompanyName(source.getCompany().getCompanyName());
-				map().setUserGroupName(source.getUserGroup().getUserGroupName());
+//				map().setUserGroupName(source.getUserGroup().getUserGroupName());
 				
 				
 			}
@@ -136,8 +136,8 @@ public class UsersServiceImpl implements UsersService {
         Optional.ofNullable(entity.getUsername()).ifPresent((Users) -> users.setUsername(entity.getUsername()));
         Optional.ofNullable(entity.getEmail()).ifPresent((Users) -> users.setEmail(entity.getEmail()));
         Optional.ofNullable(entity.getPassword()).ifPresent((Users) -> users.setPassword(entity.getPassword()));
-        Optional.ofNullable(entity.getUserGroupId())
-                .ifPresent((Users) -> users.setUserGroupId(entity.getUserGroupId()));
+//        Optional.ofNullable(entity.getUserGroupId())
+//                .ifPresent((Users) -> users.setUserGroupId(entity.getUserGroupId()));
         Optional.ofNullable(entity.getProfile()).ifPresent((Users) -> users.setProfile(entity.getProfile()));
         Optional.ofNullable(entity.getVerificationCode())
                 .ifPresent((Users) -> users.setVerificationCode(entity.getVerificationCode()));

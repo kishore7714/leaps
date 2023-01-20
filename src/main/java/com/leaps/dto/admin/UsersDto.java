@@ -28,8 +28,8 @@ public class UsersDto {
 
 	private Long companyId;
 	private String companyName;
-	private Long userGroupId;
-	private String userGroupName;
+//	private Long userGroupId;
+//	private String userGroupName;
 	private String profile;
 	private String verificationCode;
 }
