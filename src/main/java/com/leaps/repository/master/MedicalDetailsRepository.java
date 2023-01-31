@@ -22,4 +22,7 @@ public interface MedicalDetailsRepository extends JpaRepository<MedicalDetails, 
 
     @Query(value = "select * from medical_details where valid_flag=1", nativeQuery = true)
     Page<MedicalDetails> getallActivePagination(Pageable pageable);
+    
+	@Query(value = "select mf_rate from medical_details where medical_category=:category and medical_center=:center and tpa_code=:tpaCpde and valid_flag=1", nativeQuery = true)
+	Double getMfRate(String category,String center,String tpaCpde);
 }

@@ -22,4 +22,7 @@ public interface MortalityFlagMasterRepository extends JpaRepository<MortalityFl
 
     @Query(value = "select * from mortality_flag_master where valid_flag=1", nativeQuery = true)
     Page<MortalityFlagMaster> getallActivePagination(Pageable pageable);
+    
+	@Query(value = "select * from mortality_flag_master where uin_number=:uinNumber and valid_flag=1", nativeQuery = true)
+	MortalityFlagMaster getByUniqueNo(String uinNumber);
 }

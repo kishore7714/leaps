@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
 @RequestMapping("/flcLeapdetails")
 public class FlcLeapDetailsController {
 	
+	
 	private static final String DEFAULT_SORT_DIRECTION = AppConstants.DEFAULT_SORT_DIRECTION;
     private static final String DEFAULT_SORT_BY = AppConstants.DEFAULT_SORT_BY;
     private static final String DEFAULT_PAGE_SIZE = AppConstants.DEFAULT_PAGE_SIZE;
@@ -112,5 +113,23 @@ public class FlcLeapDetailsController {
         List<FlcLeapDetailsDto> globalSearch = flcLeapDetailsService.globalSearch(key);
         return new ResponseEntity<>(globalSearch, header, HttpStatus.OK);
     }
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 }

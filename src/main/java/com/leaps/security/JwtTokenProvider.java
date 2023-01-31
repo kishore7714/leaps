@@ -33,7 +33,7 @@ public class JwtTokenProvider {
 		Date currenDate = new Date();
 		Date expirationDate = new Date(currenDate.getTime() + jwtExpirationDate);
 
-		String token = Jwts.builder().setSubject(username).setIssuedAt(new Date()).setExpiration(expirationDate)
+		String token = Jwts.builder().setSubject(username).setIssuedAt(currenDate).setExpiration(expirationDate)
 				.signWith(key()).compact();
 		return token;
 	}

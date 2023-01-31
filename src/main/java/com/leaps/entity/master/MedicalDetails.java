@@ -38,7 +38,7 @@ public class MedicalDetails {
 	private String prodName;
 	private String medicalCategory;
 	private String medicalCenter;
-	private Float mfRate;
+	private Double mfRate;
 	private String startDate;
 	private String endDate;
 

@@ -32,7 +32,6 @@ public class UinMaster {
 	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "companyId", updatable = false, insertable = false)
 	private Company company;
-	
 	private String uinNumber;
 	private String planName;
 	private String planCode;
@@ -40,6 +39,7 @@ public class UinMaster {
 	private String gsvCashValue;
 	private String ssvFactor;
 	private String productType;
+	private String flcEligibility;
 	private Double surrenderChargeRate;
 	private String startDate;
 	private String endDate;

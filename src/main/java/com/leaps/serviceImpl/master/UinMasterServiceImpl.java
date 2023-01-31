@@ -146,6 +146,8 @@ public class UinMasterServiceImpl implements UinMasterService {
 				.ifPresent((UinMaster) -> uinMaster.setSsvFactor(entity.getSsvFactor()));
 		Optional.ofNullable(entity.getProductType())
 				.ifPresent((UinMaster) -> uinMaster.setProductType(entity.getProductType()));
+		Optional.ofNullable(entity.getFlcEligibility())
+		.ifPresent((UinMaster) -> uinMaster.setFlcEligibility(entity.getFlcEligibility()));
 		Optional.ofNullable(entity.getSurrenderChargeRate())
 				.ifPresent((UinMaster) -> uinMaster.setSurrenderChargeRate(entity.getSurrenderChargeRate()));
 		Optional.ofNullable(entity.getStartDate())

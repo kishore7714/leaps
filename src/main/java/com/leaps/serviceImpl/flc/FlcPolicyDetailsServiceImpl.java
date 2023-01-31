@@ -150,10 +150,10 @@ public class FlcPolicyDetailsServiceImpl implements FlcPolicyDetailsService {
 				.ifPresent((FlcPolicyDetails) -> flcPolicyDetails.setPremToDate(entity.getPremToDate()));
 		Optional.ofNullable(entity.getDocDate())
 				.ifPresent((FlcPolicyDetails) -> flcPolicyDetails.setDocDate(entity.getDocDate()));
-		Optional.ofNullable(entity.getAnbAtCccd())
-				.ifPresent((FlcPolicyDetails) -> flcPolicyDetails.setAnbAtCccd(entity.getAnbAtCccd()));
-		Optional.ofNullable(entity.getClntDob())
-				.ifPresent((FlcPolicyDetails) -> flcPolicyDetails.setClntDob(entity.getClntDob()));
+		Optional.ofNullable(entity.getLaAge())
+				.ifPresent((FlcPolicyDetails) -> flcPolicyDetails.setLaAge(entity.getLaAge()));
+		Optional.ofNullable(entity.getPhAge())
+				.ifPresent((FlcPolicyDetails) -> flcPolicyDetails.setPhAge(entity.getPhAge()));
 		Optional.ofNullable(entity.getStatCode())
 				.ifPresent((FlcPolicyDetails) -> flcPolicyDetails.setStatCode(entity.getStatCode()));
 		Optional.ofNullable(entity.getMedicalFlag())

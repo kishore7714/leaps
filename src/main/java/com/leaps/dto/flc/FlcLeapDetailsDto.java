@@ -15,7 +15,7 @@ public class FlcLeapDetailsDto {
 	private String companyName;
 
 	private String tranDate;
-	private Long policyNo;
+	private Long flcPolicyNo;
 	private Long tranNo;
 	private String uinNumber;
 	private Double totalPremium;
@@ -32,6 +32,7 @@ public class FlcLeapDetailsDto {
 	private String pfFlag;
 	private String pfRemarks;
 	private String approvFlag;
+	private String approvalDate;
 	private String approvRemarks;
 	private String pfFlagUpdate;
 

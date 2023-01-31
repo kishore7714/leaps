@@ -40,7 +40,7 @@ public class AddressServiceImpl implements AddressService {
 	// Entity to Dto using Function
 
 	public Function<Address, AddressDto> entityToDto = entity -> mapper.map(entity, AddressDto.class);
-
+	
 	// Dto to Entity using Function
 
 	public Function<AddressDto, Address> dtoToEntity = dto -> mapper.map(dto, Address.class);

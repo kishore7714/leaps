@@ -35,7 +35,7 @@ public class FlcLeapDetails {
 	private Company company;
 	
 	private String tranDate;
-	private Long policyNo;
+	private Long flcPolicyNo;
 	private Long tranNo;
 	private String uinNumber;
 	private Double totalPremium;
@@ -52,6 +52,7 @@ public class FlcLeapDetails {
 	private String pfFlag;
 	private String pfRemarks;
 	private String approvFlag;
+	private String approvalDate;
 	private String approvRemarks;
 	private String pfFlagUpdate;
 	

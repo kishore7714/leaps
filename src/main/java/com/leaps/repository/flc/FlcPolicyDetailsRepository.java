@@ -22,4 +22,16 @@ public interface FlcPolicyDetailsRepository extends JpaRepository<FlcPolicyDetai
 
     @Query(value = "select * from flc_policy_details where valid_flag=1", nativeQuery = true)
     Page<FlcPolicyDetails> getallActivePagination(Pageable pageable);
+    
+    @Query(value = "select * from flc_policy_details where clnt_num=:clnt_num and valid_flag=1", nativeQuery = true)
+	List<FlcPolicyDetails> getByClientNo(Long clnt_num);
+	
+	@Query(value = "select * from flc_policy_details where flc_policy_no=:flcPolicyNo and valid_flag=1", nativeQuery = true)
+	FlcPolicyDetails getActiveByPolicyNo(Long flcPolicyNo);
+	
+	@Query(value="select anb_at_ccd from flc_policy_details where flc_policy_no = :policyNo and valid_flag=1",nativeQuery = true)
+	Integer getByAge(Long policyNo);
+	
+	@Query(value="select EXISTS( select * from flc_policy_details where flc_policy_no = :policyNo and valid_flag=1)",nativeQuery = true)
+	Long existsByFlcPolicyNo(Long policyNo);
 }

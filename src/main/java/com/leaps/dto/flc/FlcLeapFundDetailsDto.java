@@ -14,9 +14,9 @@ public class FlcLeapFundDetailsDto {
 	private String leapFundCode;
 	private String leapFundName;
 	private String leapNavDate;
-	private String leapRateApp;
-	private String leapUnits;
-	private String leapFundValue;
+	private Double leapRateApp;
+	private Double leapUnits;
+	private Double leapFundValue;
 	private String status;
 	private String remark;
 }

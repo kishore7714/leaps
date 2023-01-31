@@ -22,4 +22,7 @@ public interface MortalityRatesRepository extends JpaRepository<MortalityRates, 
 
     @Query(value = "select * from mortality_rates where valid_flag=1", nativeQuery = true)
     Page<MortalityRates> getallActivePagination(Pageable pageable);
+    
+    @Query(value="select rates from mortality_rates where uin_number=:uinNumber  and age=:age and prem_term=:premTerm and valid_flag=1",nativeQuery = true)
+	Float findByCCCT(String uinNumber, Integer age,Double premTerm);
 }

@@ -14,9 +14,9 @@ public class MortalityRatesDto {
 	private String plan;
 	private String planName;
 	private String uinNumber;
-	private String premTerm;
+	private Double premTerm;
 	private Integer age;
-	private Float rates;
+	private Double rates;
 	private String startDate;
 	private String endDate;
 	private String gender;

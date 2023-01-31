@@ -42,8 +42,8 @@ public class FlcPolicyDetails {
 	private Double installmentPremium;
 	private String premToDate;
 	private String docDate;
-	private Integer anbAtCccd;
-	private Integer clntDob;
+	private Integer laAge;
+	private String phAge;
 	private String statCode;
 	private String medicalFlag;
 	private String smokerFlag;

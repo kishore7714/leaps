@@ -23,4 +23,7 @@ public interface FlcClientDetailsRepository extends JpaRepository<FlcClientDetai
 
     @Query(value = "select * from flc_client_details where valid_flag=1", nativeQuery = true)
     Page<FlcClientDetails> getallActivePagination(Pageable pageable);
+    
+	@Query(value = "select * from flc_client_details where clnt_num=:clientNo and valid_flag=1", nativeQuery = true)
+	FlcClientDetails getActiveByClientNo(Long clientNo);
 }

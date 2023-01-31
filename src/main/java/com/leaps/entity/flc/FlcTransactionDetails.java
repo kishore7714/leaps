@@ -39,12 +39,12 @@ public class FlcTransactionDetails {
 	private String flcReqDate;
 	private String flcLogDate;
 	private String uinNumber;
-	private Long flcPremRefund; // non ulip policy
-	private Long flcTotalPrem; // ulip policy
-	private Long flcPolicyDop;
-	private Long penalIntrest;
+	private Double flcPremRefund; // non ulip policy
+	private Double flcTotalPrem; // ulip policy
+	private Double flcPolicyDop;
+	private Double penalIntrest;
 	private Double grossFlcPay;
-	private Long medicalFee;
+	private Double medicalFee;
 	private Double stamDuty;
 	private Double riskPremRecov; // non ulip policy
 	private Double mortChargeRefund; // ulip policy

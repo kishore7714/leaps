@@ -25,7 +25,7 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/flcLeapFundDetails")
-public class FlcLeapFundDetails {
+public class FlcLeapFundDetailsController {
 
 	private static final String DEFAULT_SORT_DIRECTION = AppConstants.DEFAULT_SORT_DIRECTION;
     private static final String DEFAULT_SORT_BY = AppConstants.DEFAULT_SORT_BY;

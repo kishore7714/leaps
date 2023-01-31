@@ -22,4 +22,7 @@ public interface UinMasterRepository extends JpaRepository<UinMaster, Long>{
 
     @Query(value = "select * from uin_master where valid_flag=1", nativeQuery = true)
     Page<UinMaster> getallActivePagination(Pageable pageable);
+    
+	@Query(value = "select * from uin_master where uin_number=:uinNo and valid_flag=1", nativeQuery = true)
+	UinMaster getActiveByUIN(String uinNo);
 }

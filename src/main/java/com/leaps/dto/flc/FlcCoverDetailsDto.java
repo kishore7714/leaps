@@ -15,14 +15,14 @@ public class FlcCoverDetailsDto {
 
 	private Long clntNum;
 
-	private String policyNo;
-	private String cntType;
-	private String crTable;
+	private Long policyNo;
+	private String planName;
+	private String planCode;
 	private String uinNumber;
 	private String riskComDate;
 	private String docDate;
 	private Double sumAssured;
-	private String premCessTerm;
-	private String coverPremium;
+	private Double premCessTerm;
+	private Double coverPremium;
 	private String coverStatus;
 }

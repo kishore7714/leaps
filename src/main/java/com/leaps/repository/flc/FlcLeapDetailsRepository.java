@@ -23,4 +23,7 @@ public interface FlcLeapDetailsRepository extends JpaRepository<FlcLeapDetails, 
 
     @Query(value = "select * from flc_leap_details where valid_flag=1", nativeQuery = true)
     Page<FlcLeapDetails> getallActivePagination(Pageable pageable);
+    
+    @Query(value = "select * from flc_leap_details where tran_no=:tranNo and valid_flag=1", nativeQuery = true)
+    FlcLeapDetails getByTransNo(Long tranNo);
 }

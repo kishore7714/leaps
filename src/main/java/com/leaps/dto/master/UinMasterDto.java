@@ -23,6 +23,7 @@ public class UinMasterDto {
 	private String gsvCashValue;
 	private String ssvFactor;
 	private String productType;
+	private String flcEligibility;
 	private Double surrenderChargeRate;
 	private String startDate;
 	private String endDate;

@@ -23,4 +23,7 @@ public interface StamDutyMasterRepository extends JpaRepository<StamDutyMaster, 
 
     @Query(value = "select * from stam_duty_master where valid_flag=1", nativeQuery = true)
     Page<StamDutyMaster> getallActivePagination(Pageable pageable);
+    
+    @Query(value = "select * from stam_duty_master where uin_number=:uinNumber and valid_flag=1", nativeQuery = true)
+	StamDutyMaster getByUniqueNo(String uinNumber);
 }

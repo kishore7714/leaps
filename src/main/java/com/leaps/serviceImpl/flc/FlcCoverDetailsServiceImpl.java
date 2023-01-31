@@ -140,10 +140,10 @@ public class FlcCoverDetailsServiceImpl implements FlcCoverDetailsService {
 				.ifPresent((FlcCoverDetails) -> flcCoverDetails.setClntNum(entity.getClntNum()));
 		Optional.ofNullable(entity.getPolicyNo())
 				.ifPresent((FlcCoverDetails) -> flcCoverDetails.setPolicyNo(entity.getPolicyNo()));
-		Optional.ofNullable(entity.getCntType())
-				.ifPresent((FlcCoverDetails) -> flcCoverDetails.setCntType(entity.getCntType()));
-		Optional.ofNullable(entity.getCrTable())
-				.ifPresent((FlcCoverDetails) -> flcCoverDetails.setCrTable(entity.getCrTable()));
+		Optional.ofNullable(entity.getPlanName())
+				.ifPresent((FlcCoverDetails) -> flcCoverDetails.setPlanName(entity.getPlanName()));
+		Optional.ofNullable(entity.getPlanCode())
+				.ifPresent((FlcCoverDetails) -> flcCoverDetails.setPlanCode(entity.getPlanCode()));
 		Optional.ofNullable(entity.getUinNumber())
 				.ifPresent((FlcCoverDetails) -> flcCoverDetails.setUinNumber(entity.getUinNumber()));
 		Optional.ofNullable(entity.getRiskComDate())

@@ -23,4 +23,13 @@ public interface FlcCoverDetailsRepository extends JpaRepository<FlcCoverDetails
 
     @Query(value = "select * from flc_cover_details where valid_flag=1", nativeQuery = true)
     Page<FlcCoverDetails> getallActivePagination(Pageable pageable);
+    
+    @Query(value = "select * from flc_cover_details where policy_no=:policy_no and valid_flag=1", nativeQuery = true)
+	List<FlcCoverDetails> getAllByPolicyNo(Long policy_no);
+	
+	@Query(value="select * from flc_cover_details where policy_no = :policyNo and valid_flag=1",nativeQuery = true)
+	FlcCoverDetails findByPolicyNo(Long policyNo);
+	
+	@Query(value = "select * from flc_cover_details where policy_no=:policy and valid_flag=1", nativeQuery = true)
+	FlcCoverDetails getByPolicy(Long policy);
 }

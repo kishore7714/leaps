@@ -23,5 +23,9 @@ public interface FlcFundDetailsPasRepository extends JpaRepository<FlcFundDetail
 
     @Query(value = "select * from flc_fund_details_pas where valid_flag=1", nativeQuery = true)
     Page<FlcFundDetailsPas> getallActivePagination(Pageable pageable);
+    
+	@Query(value = "select * from flc_fund_details_pas where policy_no=:policyNo and valid_flag=1", nativeQuery = true)
+	List<FlcFundDetailsPas> getallByPolicy(Long policyNo);
+
 
 }
